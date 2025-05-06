@@ -1,0 +1,47 @@
+integer add[integer num1, integer num2] [
+    integer result.
+    result = num1 + num2.
+    return result.
+]
+
+boolean isNegative[integer num] [ 
+    boolean result.
+    if (num < 0) {
+        result = TRUE.
+    } else {
+        result = FALSE.
+    }
+    return result.
+]
+
+void main[] [
+    integer x.
+    integer y.
+    boolean showNegative.
+    integer result.
+    disp <- "Enter first number: ".
+    input -> x.
+    disp <- "Enter second number: ".
+    input -> y.
+    result = add(x, y).
+    disp <- "Result is ".
+    disp <- result.
+    disp <- "\n".
+    disp <- "Want to know if its negaive or positive? (1 / 0): ".
+    input -> showNegative.
+    if (showNegative) {
+        if (isNegative(result)) {
+            disp <- "The sum is NEGATIVE".
+        } else {
+            disp <- "The sum is POSITIVE".
+        }
+    }
+    disp <- "\n".
+    disp <- "Enter 100 to exit: ".
+    input -> x.
+    while (x ^= 100) {
+        disp <- "Enter 100 to exit: ".
+        input -> x.
+    }
+    disp <- "\nGOODBYE!".
+]

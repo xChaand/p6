@@ -1,13 +1,7 @@
-integer add[integer a, integer b] [
-    return a + b.
-]
-
 void main[] [
-    integer x.
-    integer y.
-    integer z.
-    x = 6.
-    y = 4.
-    z = add(x, y).
-    disp <- z.
+    if ("hi" == "hid") {
+        disp <- "good".
+    } else {
+        disp <- "bad".
+    }
 ]
